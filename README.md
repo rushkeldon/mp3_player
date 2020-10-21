@@ -1,7 +1,7 @@
 # MP3 Player
-🌐  [Production](https://appcloud9.com/mp3/) https://appcloud9.com/mp3/
+🌐   [Production](https://appcloud9.com/mp3/) https://appcloud9.com/mp3/
 
-🌐  Sample MP3 directories at https://gloriouschoice.com/snd/
+🌐   Sample MP3 directories at https://gloriouschoice.com/snd/
 
 ### WHAT
 * A web based MP3 player
