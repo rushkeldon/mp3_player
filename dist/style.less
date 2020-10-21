@@ -1,0 +1,252 @@
+@yellow: #EFC369;
+@purple: #A494C0;
+@orange: #D7925F;
+@green: #B5BC67;
+@offBlack: #1D1F20;
+@lightBlue: #87CEFA;
+@pink: #FF00FF;
+
+html {
+   box-sizing: border-box;
+}
+
+*, *:before, *:after {
+   box-sizing: inherit;
+}
+
+body {
+   font-family: "Courier New", sans-serif;
+   color: @green;
+   background-color: @offBlack;
+   font-size: 16px;
+   padding: 5px;
+}
+
+.gleaner {
+   display: none;
+}
+
+label {
+   font-weight: bold;
+}
+
+input {
+   &[type=text] {
+      color: @offBlack;
+      font-size: 120%;
+      width: 70%;
+      padding: 5px;
+      /* NOTE : really, just this part hides the spinners! */
+
+      &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+      }
+   }
+
+   &[type=checkbox] {
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      width: 30px;
+      height: 30px;
+      border: 2px solid @green;
+      border-radius: 3px;
+      text-align: center;
+      display: inline-block;
+      margin: 0px;
+      outline: none;
+      background: none;
+
+      &:hover {
+         background: black;
+      }
+
+      &:after {
+         color: rgba(0, 0, 0, 0);
+         content: "\2714";
+         font-size: 20px;
+         text-align: center;
+         line-height: 30px;
+      }
+
+      &:checked {
+         outline: none;
+
+         &:after {
+            color: @yellow;
+            content: "\2714";
+         }
+      }
+   }
+}
+
+h1, h2, h3, h4 {
+   margin: 0px;
+}
+
+h2 {
+   display : inline-block;
+   width : 175px;
+   margin-right : 20px;
+}
+
+pre {
+   box-sizing: border-box;
+   background-color: @offBlack;
+   font-size: 16px;
+   .yellow();
+   border: 1px solid @green;
+   padding: 15px;
+   margin: 0px;
+   &#echo {
+      display : none;
+      &.displayed {
+         display : block;
+      }
+   }
+}
+
+a {
+   color: @lightBlue;
+   text-decoration: none;
+
+   &:visited {
+      color: @lightBlue;
+   }
+
+   &:hover {
+      /*color : yellow;*/
+      text-decoration: underline;
+   }
+}
+
+.playlist-links {
+   padding: 0px 15px;
+
+   a {
+      display: block;
+      text-decoration: underline;
+      cursor: pointer;
+      margin: 5px 15px;
+
+      &.now-playing {
+         color: @green;
+      }
+   }
+}
+
+.hidden {
+   display: none;
+}
+
+.yellow {
+   color: @yellow;
+   /*font-weight: bold;*/
+}
+
+.purple {
+   color: @purple;
+}
+
+.orange {
+   color: @orange;
+}
+
+.emphasize {
+   font-size: 120%;
+}
+
+.pink {
+   color: @pink;
+}
+
+.comment {
+   .yellow();
+}
+
+strong {
+   font-weight: bold;
+   font-size: 105%;
+}
+
+.title {
+   line-height: 1.5;
+   margin-left: -3px;
+}
+
+table {
+   width: 100%;
+   margin-top: 10px;
+
+   tr {
+      td {
+         padding: 0px;
+         width: 100px;
+
+         &.right {
+            text-align: right;
+         }
+
+         &.audio {
+            width: 90%;
+
+            audio {
+               width: 100%;
+               display: inline-block;
+            }
+         }
+      }
+   }
+}
+
+button {
+   box-sizing: border-box;
+   font-family: "Courier New";
+   font-size: 16px;
+   color: @yellow;
+   border: 2px solid @orange;
+   background-color: @offBlack;
+   border-radius: 10px;
+   padding: 12px 16px;
+   outline: 0px;
+   display: inline-block;
+   font-weight: bold;
+   margin-left: 0px;
+   cursor: default;
+
+   &.prev {
+      white-space: nowrap;
+
+      &:before {
+         content: "|\25C4";
+      }
+   }
+
+   &.next {
+      white-space: nowrap;
+
+      &:before {
+         content: "\25BA |";
+      }
+   }
+
+   &:hover {
+      color: @orange;
+      border: 2px solid @yellow;
+      cursor: pointer;
+      background-color: black;
+   }
+
+   &:focus {
+      color: @yellow;
+      border: 2px solid @orange;
+      cursor: default;
+   }
+
+   &:active {
+      color: yellow;
+      border: 2px solid @yellow;
+      cursor: default;
+   }
+}

@@ -1,0 +1,207 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Courier New", sans-serif;
+  color: #B5BC67;
+  background-color: #1D1F20;
+  font-size: 16px;
+  padding: 5px;
+}
+.gleaner {
+  display: none;
+}
+label {
+  font-weight: bold;
+}
+input[type=text] {
+  color: #1D1F20;
+  font-size: 120%;
+  width: 70%;
+  padding: 5px;
+  /* NOTE : really, just this part hides the spinners! */
+}
+input[type=text]::-webkit-outer-spin-button,
+input[type=text]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=checkbox] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #B5BC67;
+  border-radius: 3px;
+  text-align: center;
+  display: inline-block;
+  margin: 0px;
+  outline: none;
+  background: none;
+}
+input[type=checkbox]:hover {
+  background: black;
+}
+input[type=checkbox]:after {
+  color: rgba(0, 0, 0, 0);
+  content: "\2714";
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+}
+input[type=checkbox]:checked {
+  outline: none;
+}
+input[type=checkbox]:checked:after {
+  color: #EFC369;
+  content: "\2714";
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0px;
+}
+h2 {
+  display: inline-block;
+  width: 175px;
+  margin-right: 20px;
+}
+pre {
+  box-sizing: border-box;
+  background-color: #1D1F20;
+  font-size: 16px;
+  color: #EFC369;
+  /*font-weight: bold;*/
+  border: 1px solid #B5BC67;
+  padding: 15px;
+  margin: 0px;
+}
+pre#echo {
+  display: none;
+}
+pre#echo.displayed {
+  display: block;
+}
+a {
+  color: #87CEFA;
+  text-decoration: none;
+}
+a:visited {
+  color: #87CEFA;
+}
+a:hover {
+  /*color : yellow;*/
+  text-decoration: underline;
+}
+.playlist-links {
+  padding: 0px 15px;
+}
+.playlist-links a {
+  display: block;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 5px 15px;
+}
+.playlist-links a.now-playing {
+  color: #B5BC67;
+}
+.hidden {
+  display: none;
+}
+.yellow {
+  color: #EFC369;
+  /*font-weight: bold;*/
+}
+.purple {
+  color: #A494C0;
+}
+.orange {
+  color: #D7925F;
+}
+.emphasize {
+  font-size: 120%;
+}
+.pink {
+  color: #FF00FF;
+}
+.comment {
+  color: #EFC369;
+  /*font-weight: bold;*/
+}
+strong {
+  font-weight: bold;
+  font-size: 105%;
+}
+.title {
+  line-height: 1.5;
+  margin-left: -3px;
+}
+table {
+  width: 100%;
+  margin-top: 10px;
+}
+table tr td {
+  padding: 0px;
+  width: 100px;
+}
+table tr td.right {
+  text-align: right;
+}
+table tr td.audio {
+  width: 90%;
+}
+table tr td.audio audio {
+  width: 100%;
+  display: inline-block;
+}
+button {
+  box-sizing: border-box;
+  font-family: "Courier New";
+  font-size: 16px;
+  color: #EFC369;
+  border: 2px solid #D7925F;
+  background-color: #1D1F20;
+  border-radius: 10px;
+  padding: 12px 16px;
+  outline: 0px;
+  display: inline-block;
+  font-weight: bold;
+  margin-left: 0px;
+  cursor: default;
+}
+button.prev {
+  white-space: nowrap;
+}
+button.prev:before {
+  content: "|\25C4";
+}
+button.next {
+  white-space: nowrap;
+}
+button.next:before {
+  content: "\25BA |";
+}
+button:hover {
+  color: #D7925F;
+  border: 2px solid #EFC369;
+  cursor: pointer;
+  background-color: black;
+}
+button:focus {
+  color: #EFC369;
+  border: 2px solid #D7925F;
+  cursor: default;
+}
+button:active {
+  color: yellow;
+  border: 2px solid #EFC369;
+  cursor: default;
+}
+/*# sourceMappingURL=style.css.map */

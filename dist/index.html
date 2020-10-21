@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>MP3 Player</title>
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1">
+      <link
+         rel="stylesheet"
+         href="./style.css">
+
+   </head>
+   <body>
+      <h2>MP3 Player</h2>
+      <b>https</b>
+      <input
+         type="checkbox"
+         id="https">
+      <br/><br/>
+      <label for="dirpath">URL</label>
+      <input
+         type="text"
+         id="dirpath"
+         placeholder="URL to directory with MP3 files">
+      <button class="go">go</button>
+      <br/>
+      <b>keepAwake</b>
+      <input
+         type="checkbox"
+         id="keepawake">
+      <br/>
+      <table>
+         <tr>
+            <td>
+               <button class="prev"></button>
+            </td>
+            <td class="audio">
+               <audio
+                  autoplay
+                  controls
+                  type="audio/mp3"
+                  src=""></audio>
+            </td>
+            <td class="right">
+               <button class="next"></button>
+            </td>
+         </tr>
+      </table>
+
+      <div class="playlist-links"></div>
+      <br/>
+      <b>debug</b>
+      <input
+         type="checkbox"
+         id="debug">
+      <br/><br/>
+      <pre id="echo"></pre>
+      <div class="gleaner"></div>
+      <p class="yellow">The purpose of this page is to play any collection of MP3 files from the directory specified and in the order found.</p>
+      <p class="purple">NOTE : directory must be on an apache server with directory listing turned on!</p>
+      <p class="purple">Also - protocols must match.  If URL is https then check the 'https' box up top.</p>
+      <script src="./script.js"></script>
+   </body>
+</html>
